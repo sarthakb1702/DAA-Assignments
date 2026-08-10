@@ -1,0 +1,24 @@
+Total orders read: 10000
+
+Orders sorted by timestamp:
+
+Order ID: 4009 | Customer ID: 3507 | Timestamp: 2024-01-01T00:39:56 | Amount: 1209.56
+Order ID: 6866 | Customer ID: 1295 | Timestamp: 2024-01-01T01:08:04 | Amount: 1876.5
+Order ID: 8613 | Customer ID: 5438 | Timestamp: 2024-01-01T01:35:32 | Amount: 989.3
+Order ID: 1447 | Customer ID: 2489 | Timestamp: 2024-01-01T03:09:49 | Amount: 1584.61
+Order ID: 1887 | Customer ID: 1567 | Timestamp: 2024-01-01T03:38:48 | Amount: 1966
+Order ID: 162 | Customer ID: 5978 | Timestamp: 2024-01-01T07:34:02 | Amount: 577.39
+Order ID: 3513 | Customer ID: 1854 | Timestamp: 2024-01-01T09:59:25 | Amount: 1322.56
+Order ID: 9735 | Customer ID: 8598 | Timestamp: 2024-01-01T12:35:49 | Amount: 586.41
+Order ID: 1043 | Customer ID: 8009 | Timestamp: 2024-01-01T12:36:00 | Amount: 408.62
+Order ID: 1848 | Customer ID: 9289 | Timestamp: 2024-01-01T13:25:06 | Amount: 761.19
+Order ID: 9105 | Customer ID: 5926 | Timestamp: 2024-01-01T14:47:39 | Amount: 940.3
+Order ID: 4486 | Customer ID: 3416 | Timestamp: 2024-01-01T15:43:06 | Amount: 404.81
+Order ID: 2155 | Customer ID: 6885 | Timestamp: 2024-01-01T15:43:13 | Amount: 223.85
+Order ID: 9977 | Customer ID: 5863 | Timestamp: 2024-01-01T15:49:00 | Amount: 1903.1
+Order ID: 2250 | Customer ID: 1619 | Timestamp: 2024-01-01T16:10:26 | Amount: 1330.89
+Order ID: 2357 | Customer ID: 2158 | Timestamp: 2024-01-02T01:25:12 | Amount: 772.83
+Order ID: 3553 | Customer ID: 6692 | Timestamp: 2024-01-02T02:05:49 | Amount: 1267.2
+Order ID: 5894 | Customer ID: 8881 | Timestamp: 2024-01-02T03:13:33 | Amount: 390.87
+Order ID: 1131 | Customer ID: 7164 | Timestamp: 2024-01-02T03:15:15 | Amount: 1698.77
+Order ID: 8489 | Customer ID: 4272 | Timestamp: 2024-01-02T03:27:11 | Amount: 1879.27
