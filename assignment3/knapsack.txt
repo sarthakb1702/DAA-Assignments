@@ -1,0 +1,23 @@
+Total items read: 30
+
+Enter boat capacity (kg): 
+==============================================
+       EMERGENCY RELIEF SUPPLY PLAN
+==============================================
+Boat Capacity       : 50.00 kg
+Used Capacity       : 45.10 kg
+Remaining Capacity  : 4.90 kg
+Total Utility       : 802.20
+
+Selected Items:
+----------------------------------------------
+ID: 30 | Oral Rehydration Salts #30 | Weight: 1.00 kg | Utility: 98.00 | FULL
+ID: 3 | Oral Rehydration Salts #3 | Weight: 2.70 kg | Utility: 92.70 | FULL
+ID: 18 | First Aid Kit #18 | Weight: 4.90 kg | Utility: 99.40 | FULL
+ID: 10 | Loose Antibiotic Powder #10 | Weight: 5.20 kg | Utility: 94.00 | FULL
+ID: 16 | Loose Antibiotic Powder #16 | Weight: 4.60 kg | Utility: 80.50 | FULL
+ID: 14 | Painkillers (Bulk) #14 | Weight: 4.70 kg | Utility: 73.80 | FULL
+ID: 25 | Loose Antibiotic Powder #25 | Weight: 5.90 kg | Utility: 80.20 | FULL
+ID: 20 | Water Purification Tablets #20 | Weight: 8.10 kg | Utility: 94.60 | FULL
+ID: 22 | Oral Rehydration Salts #22 | Weight: 8.00 kg | Utility: 89.00 | FULL
+==============================================

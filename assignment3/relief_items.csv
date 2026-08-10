@@ -1,0 +1,31 @@
+item_id,name,category,weight_kg,utility_value,divisible
+1,Emergency Tent #1,Shelter,36.6,76.4,no
+2,Emergency Tent #2,Shelter,26.3,76.4,no
+3,Oral Rehydration Salts #3,Medicine,2.7,92.7,yes
+4,Hygiene Kits #4,Medicine,13.4,54.7,yes
+5,Emergency Tent #5,Shelter,22.6,57.3,no
+6,Water Storage Tank #6,Water,45.4,74.9,no
+7,Portable Generator #7,Equipment,88.2,66.3,no
+8,Rope & Rescue Gear #8,Equipment,22.3,55.6,no
+9,Tarpaulin Sheets #9,Shelter,10.7,35.9,yes
+10,Loose Antibiotic Powder #10,Medicine,5.2,94.0,yes
+11,Emergency Medical Kit #11,Medicine,16.6,98.4,no
+12,Tarpaulin Sheets #12,Shelter,17.8,42.4,yes
+13,Purified Drinking Water #13,Water,139.2,91.9,yes
+14,Painkillers (Bulk) #14,Medicine,4.7,73.8,yes
+15,Rice & Grain Sacks #15,Food,113.5,62.9,yes
+16,Loose Antibiotic Powder #16,Medicine,4.6,80.5,yes
+17,Solar Lantern Pack #17,Equipment,16.5,45.0,no
+18,First Aid Kit #18,Medicine,4.9,99.4,no
+19,Stretcher Unit #19,Equipment,6.0,65.2,no
+20,Water Purification Tablets #20,Water,8.1,94.6,yes
+21,Portable Generator #21,Equipment,61.0,64.2,no
+22,Oral Rehydration Salts #22,Medicine,8.0,89.0,yes
+23,Rice & Grain Sacks #23,Food,63.9,55.4,yes
+24,Water Pump Unit #24,Equipment,60.3,57.9,no
+25,Loose Antibiotic Powder #25,Medicine,5.9,80.2,yes
+26,Emergency Tent #26,Shelter,34.9,59.4,no
+27,Fuel (Diesel/Petrol) #27,Fuel,27.0,57.7,yes
+28,Clothing Bundles #28,Shelter,40.8,33.4,yes
+29,Portable Generator #29,Equipment,45.8,60.5,no
+30,Oral Rehydration Salts #30,Medicine,1.0,98.0,yes
