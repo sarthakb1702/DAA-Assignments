@@ -1,0 +1,98 @@
+==============================================
+     SAMPLE (assignment example)
+==============================================
+Students enrolled -> S1:C1,C2  S2:C2,C3  S3:C1,C3  S4:C4
+Rooms -> R1=100 R2=80 R3=50
+
+Course  Slot      Room
+C1      Slot 1    R3
+C2      Slot 2    R3
+C3      Slot 3    R3
+C4      Slot 1    R2
+Slots used: 3
+
+==============================================
+     UNIVERSITY EXAM TIMETABLE SCHEDULING
+==============================================
+Total courses read  : 40
+Total students read : 400
+Total rooms read    : 8
+Conflict graph      : 40 vertices, 418 edges, max degree 39
+
+---------- Algorithm comparison (dataset) ----------
+Algorithm         Slots(colours)  Valid       Time(ms)
+Greedy            14              yes         0.005
+Welsh-Powell      14              yes         0.006
+DSATUR            14              yes         0.066
+Backtracking      14              yes         0.008  (proved optimal)
+Lower bound (clique found) : 14 slots
+
+---------- Final timetable (DSATUR + best-fit room allocation) ----------
+Course  Name                                Students  Slot      Room    Capacity
+--------------------------------------------------------------------------------
+C33     Technical Communication             59        Slot 1    R4      60
+
+C34     Professional Ethics                 52        Slot 2    R4      60
+
+C36     Discrete Mathematics                45        Slot 3    R4      60
+
+C37     Probability and Statistics          58        Slot 4    R4      60
+
+C38     Engineering Economics               44        Slot 5    R4      60
+
+C40     Foreign Language                    57        Slot 6    R4      60
+
+C31     Machine Learning                    49        Slot 7    R4      60
+C39     Project Management                  65        Slot 7    R3      80
+
+C32     Entrepreneurship                    48        Slot 8    R5      60
+C35     Environmental Studies               58        Slot 8    R4      60
+
+C1      Data Structures                     47        Slot 9    R1      120
+C7      Web Technologies                    59        Slot 9    R4      60
+C13     Digital Electronics                 55        Slot 9    R3      80
+C19     Thermodynamics                      58        Slot 9    R5      60
+C25     Structural Analysis                 52        Slot 9    R2      100
+
+C2      Algorithms                          51        Slot 10   R3      80
+C8      Cloud Computing                     48        Slot 10   R2      100
+C14     Microprocessors                     57        Slot 10   R5      60
+C20     Fluid Mechanics                     58        Slot 10   R4      60
+C26     Geotechnical Engg                   48        Slot 10   R1      120
+
+C3      Operating Systems                   47        Slot 11   R2      100
+C9      Information Security                52        Slot 11   R5      60
+C15     Signals and Systems                 57        Slot 11   R4      60
+C21     Machine Design                      68        Slot 11   R3      80
+C27     Surveying                           42        Slot 11   R1      120
+
+C4      DBMS                                54        Slot 12   R4      60
+C10     Data Analytics                      49        Slot 12   R2      100
+C16     VLSI Design                         52        Slot 12   R5      60
+C22     Manufacturing Processes             61        Slot 12   R3      80
+C28     Hydrology                           49        Slot 12   R1      120
+
+C5      Computer Networks                   49        Slot 13   R5      60
+C11     Mobile Computing                    47        Slot 13   R1      120
+C17     Control Systems                     59        Slot 13   R4      60
+C23     Heat Transfer                       63        Slot 13   R3      80
+C29     Transportation Engg                 48        Slot 13   R2      100
+
+C6      Software Engineering                52        Slot 14   R2      100
+C12     IoT Systems                         53        Slot 14   R3      80
+C18     Embedded Systems                    58        Slot 14   R4      60
+C24     Robotics                            57        Slot 14   R5      60
+C30     Concrete Technology                 52        Slot 14   R1      120
+
+Total exam slots used : 14 (colours from DSATUR: 14)
+Verification (no student clash, no room clash, capacity ok): PASSED
+Room utilisation (students / seats allotted): 68.1 %
+
+---------- Scalability test (random data, 5 courses per student) ----------
+Courses   Students  Edges       Build(ms) Greedy      (ms)    W-Powell    (ms)    DSATUR    (ms)
+250       2500      15499       6.372     42          0.089   40          0.088   36        2.690
+500       5000      38256       13.188    42          0.165   42          0.201   38        7.080
+1000      10000     86813       27.595    43          0.305   43          0.534   38        20.703
+2000      20000     185797      56.730    44          0.655   44          1.226   39        60.497
+4000      40000     385347      112.682   44          0.974   43          2.134   38        174.283
+==============================================
