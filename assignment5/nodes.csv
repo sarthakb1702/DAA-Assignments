@@ -1,0 +1,25 @@
+node_id,name,stage,type
+1,Pune Central Warehouse,1,Warehouse
+2,Nashik Warehouse,1,Warehouse
+3,Nagpur Warehouse,1,Warehouse
+4,Mumbai Regional Hub,2,Regional Hub
+5,Hyderabad Regional Hub,2,Regional Hub
+6,Bengaluru Regional Hub,2,Regional Hub
+7,Ahmedabad Regional Hub,2,Regional Hub
+8,Surat Transit Hub,3,Transit Hub
+9,Indore Transit Hub,3,Transit Hub
+10,Vijayawada Transit Hub,3,Transit Hub
+11,Chennai Transit Hub,3,Transit Hub
+12,Jaipur Transit Hub,3,Transit Hub
+13,Delhi Sorting Centre,4,Sorting Centre
+14,Lucknow Sorting Centre,4,Sorting Centre
+15,Kolkata Sorting Centre,4,Sorting Centre
+16,Coimbatore Sorting Centre,4,Sorting Centre
+17,Bhopal Sorting Centre,4,Sorting Centre
+18,Gurugram Local Depot,5,Local Depot
+19,Kanpur Local Depot,5,Local Depot
+20,Howrah Local Depot,5,Local Depot
+21,Madurai Local Depot,5,Local Depot
+22,Noida Delivery Point,6,Delivery Point
+23,Salt Lake Delivery Point,6,Delivery Point
+24,Kochi Delivery Point,6,Delivery Point

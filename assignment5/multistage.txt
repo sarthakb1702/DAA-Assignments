@@ -1,0 +1,61 @@
+Total nodes read    : 24
+Total stages        : 6
+Total routes loaded : 49 (closed: 0, invalid: 0)
+Delivery requests   : 7
+
+==============================================
+     SWIFTCARGO ROUTE OPTIMIZATION SYSTEM
+==============================================
+---------- Initial optimal routes ----------
+Request 1 [Electronics]: Pune Central Warehouse -> Noida Delivery Point
+   Minimum cost: 44.30
+   Path: 1 -> 4 -> 9 -> 17 -> 19 -> 22
+Request 2 [Medical Supplies]: Pune Central Warehouse -> Kochi Delivery Point
+   Minimum cost: 57.10
+   Path: 1 -> 5 -> 10 -> 16 -> 21 -> 24
+Request 3 [Apparel]: Nashik Warehouse -> Noida Delivery Point
+   Minimum cost: 41.30
+   Path: 2 -> 4 -> 9 -> 17 -> 19 -> 22
+Request 4 [Groceries]: Nashik Warehouse -> Salt Lake Delivery Point
+   Minimum cost: 56.30
+   Path: 2 -> 4 -> 9 -> 17 -> 19 -> 23
+Request 5 [Spare Parts]: Nagpur Warehouse -> Kochi Delivery Point
+   Minimum cost: 48.50
+   Path: 3 -> 5 -> 10 -> 16 -> 21 -> 24
+Request 6 [Books]: Nagpur Warehouse -> Salt Lake Delivery Point
+   Minimum cost: 43.01
+   Path: 3 -> 5 -> 10 -> 15 -> 20 -> 23
+Request 7 [Furniture]: Pune Central Warehouse -> Salt Lake Delivery Point
+   Minimum cost: 51.61
+   Path: 1 -> 5 -> 10 -> 15 -> 20 -> 23
+
+Enter route to update (u v newCost, -1 = road closed): 5 10 -1
+>> ALERT: route 5 -> 10 is now CLOSED. Re-routing...
+
+---------- Re-computed optimal routes ----------
+Request 1 [Electronics]: Pune Central Warehouse -> Noida Delivery Point
+   Minimum cost: 44.30
+   Path: 1 -> 4 -> 9 -> 17 -> 19 -> 22
+Request 2 [Medical Supplies]: Pune Central Warehouse -> Kochi Delivery Point
+   Minimum cost: 61.02
+   Path: 1 -> 6 -> 11 -> 16 -> 21 -> 24
+Request 3 [Apparel]: Nashik Warehouse -> Noida Delivery Point
+   Minimum cost: 41.30
+   Path: 2 -> 4 -> 9 -> 17 -> 19 -> 22
+Request 4 [Groceries]: Nashik Warehouse -> Salt Lake Delivery Point
+   Minimum cost: 56.30
+   Path: 2 -> 4 -> 9 -> 17 -> 19 -> 23
+Request 5 [Spare Parts]: Nagpur Warehouse -> Kochi Delivery Point
+   Minimum cost: 51.02
+   Path: 3 -> 6 -> 11 -> 16 -> 21 -> 24
+Request 6 [Books]: Nagpur Warehouse -> Salt Lake Delivery Point
+   Minimum cost: 53.62
+   Path: 3 -> 6 -> 11 -> 16 -> 21 -> 23
+Request 7 [Furniture]: Pune Central Warehouse -> Salt Lake Delivery Point
+   Minimum cost: 59.30
+   Path: 1 -> 4 -> 9 -> 17 -> 19 -> 23
+
+---------- Scalability test ----------
+Synthetic network: 2000 nodes, 50 stages, 7840 routes
+DP solved in 0.042 ms
+==============================================
