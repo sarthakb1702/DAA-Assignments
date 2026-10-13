@@ -1,0 +1,103 @@
+==============================================
+     SWIFTSHIP ROUTE OPTIMIZATION (TSP)
+     Least Cost Branch and Bound
+==============================================
+
+---------- Sample: 5 cities, cost matrix from the notes ----------
+Initial cost matrix:
+  inf   20   30   10   11
+   15  inf   16    4    2
+    3    5  inf    2    4
+   19    6   18  inf    3
+   16    4    7   16  inf
+Reduced cost matrix (lb0 = 25):
+  inf   10   17    0    1
+   12  inf   11    2    0
+    0    3  inf    0    2
+   15    3   12  inf    0
+   11    0    0   12  inf
+Optimal tour cost   : 28   (brute force: 28, match)
+Optimal tour        : C1 -> C4 -> C2 -> C5 -> C3 -> C1
+Nodes generated 10, expanded 4, pruned 6  (brute force would check 24 tours)
+
+Cities in file      : 18   (roads: good 26, fair 33, poor 29, ghat 49, expressway 16)
+Cities in this run  : 15   start/end depot: Pune
+Fuel cost model     : Rs 9/km x road factor (good 1.0, fair 1.2, poor 1.3, ghat 1.2, expressway 2.2)
+                      speed (km/h): good 55, fair 45, poor 25, ghat 25, expressway 85
+
+---------- LC Branch and Bound (no time limit) ----------
+Route : Pune -> Mumbai -> Ahmednagar -> Nashik -> Aurangabad -> Jalgaon -> Akola -> Amravati -> Nagpur -> Nanded -> Latur -> Solapur -> Sangli -> Kolhapur -> Satara -> Pune
+Leg                       Km        Fuel(Rs)    Drive(h)
+Pune -> Mumbai            157       3109        1.8
+Mumbai -> Ahmednagar      254       2743        10.2
+Ahmednagar -> Nashik      184       1987        4.1
+Nashik -> Aurangabad      211       2469        8.4
+Aurangabad -> Jalgaon     166       1793        3.7
+Jalgaon -> Akola          198       2317        7.9
+Akola -> Amravati         106       1240        4.2
+Amravati -> Nagpur        184       1987        4.1
+Nagpur -> Nanded          377       3393        6.9
+Nanded -> Latur           149       1341        2.7
+Latur -> Solapur          139       1501        3.1
+Solapur -> Sangli         219       1971        4.0
+Sangli -> Kolhapur        51        551         1.1
+Kolhapur -> Satara        145       2871        1.7
+Satara -> Pune            123       2435        1.4
+Total distance      : 2663 km
+Total fuel cost     : Rs 31708
+Total trip time     : 72.4 h (driving + 0.5 h stop in every city)
+Root lower bound    : Rs 26048
+Nodes generated     : 27747
+Nodes expanded      : 3291
+Pruned by bound     : 24456
+Max priority queue  : 24457
+Time taken          : 39.924 ms
+
+---------- LC Branch and Bound with time limit 64.9 h ----------
+Cheapest route takes 72.4 h; the fastest possible tour takes 57.6 h.
+(limit = halfway between the two, so the cheapest route is no longer allowed)
+Route : Pune -> Satara -> Kolhapur -> Sangli -> Solapur -> Latur -> Nanded -> Nagpur -> Amravati -> Akola -> Jalgaon -> Aurangabad -> Ahmednagar -> Nashik -> Mumbai -> Pune
+Leg                       Km        Fuel(Rs)    Drive(h)
+Pune -> Satara            123       2435        1.4
+Satara -> Kolhapur        145       2871        1.7
+Kolhapur -> Sangli        51        551         1.1
+Sangli -> Solapur         219       1971        4.0
+Solapur -> Latur          139       1501        3.1
+Latur -> Nanded           149       1341        2.7
+Nanded -> Nagpur          377       3393        6.9
+Nagpur -> Amravati        184       1987        4.1
+Amravati -> Akola         106       1240        4.2
+Akola -> Jalgaon          198       2317        7.9
+Jalgaon -> Aurangabad     166       1793        3.7
+Aurangabad -> Ahmednagar  140       2772        1.6
+Ahmednagar -> Nashik      184       1987        4.1
+Nashik -> Mumbai          181       3584        2.1
+Mumbai -> Pune            157       3109        1.8
+Total distance      : 2519 km
+Total fuel cost     : Rs 32852
+Total trip time     : 57.6 h (driving + 0.5 h stop in every city)
+Extra fuel cost vs unconstrained optimum : Rs 1144  (time saved 14.8 h)
+Nodes generated     : 49639   pruned by time: 30153   Time taken: 71.055 ms
+
+---------- Brute force vs LC Branch and Bound (same cost model) ----------
+N   (N-1)!        BF(ms)      BB(ms)      BB nodes    BB/(N-1)!   Cost(Rs)  Match
+6   120           0.005       0.061       46          0.383333    19333     yes
+8   5040          0.146       0.167       329         0.065278    19960     yes
+9   40320         1.365       0.458       911         0.022594    21106     yes
+10  362880        9.616       0.841       1772        0.004883    22564     yes
+11  3628800       119.373     1.207       2334        0.000643    23588     yes
+12  39916800      1236.193    5.161       6520        0.000163    26011     yes
+
+---------- Check of the time-limited search (N = 10, brute force with the same limit) ----------
+Cheapest tour 22564 Rs in 46.4 h, fastest tour 31.6 h, limit 39.0 h
+B&B with limit: Rs 23708   brute force with limit: Rs 23708   match
+
+---------- LC Branch and Bound on larger instances (brute force infeasible) ----------
+N   (N-1)!              BB(ms)      Generated   Expanded    MaxPQ     Cost(Rs)  NN(Rs)    NN gap    Held-Karp
+13  4.79e+08            3.8         5081        711         4371      28808     36436     +26.5 %   match
+14  6.23e+09            25.9        23107       3020        20088     29190     36818     +26.1 %   match
+15  8.72e+10            32.3        27747       3291        24457     31708     39044     +23.1 %   match
+16  1.31e+12            292.6       144131      16779       127353    32043     39044     +21.8 %   match
+17  2.09e+13            143.1       97293       10200       87094     32153     35356     +10.0 %   match
+18  3.56e+14            192.1       106271      10022       96250     33024     36228     +9.7 %    match
+==============================================
