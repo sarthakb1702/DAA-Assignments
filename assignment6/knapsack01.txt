@@ -1,0 +1,82 @@
+Total items read    : 30 (perishable/priority: 13)
+Total trucks read   : 3
+
+Enter truck capacity W (kg): 100
+==============================================
+     DISASTER RELIEF RESOURCE ALLOCATION
+==============================================
+---------- 0/1 Knapsack (Dynamic Programming) ----------
+Truck Capacity      : 100 kg
+Used Capacity       : 100 kg
+Remaining Capacity  : 0 kg
+Total Utility       : 1639
+Selected Items:
+----------------------------------------------
+ID:  1 | Insulin & Cold-chain Medicines | Weight:  8 kg | Utility: 175 | PRIORITY
+ID:  2 | Antibiotics Box                | Weight:  6 kg | Utility: 138 | PRIORITY
+ID:  3 | First Aid Kit                  | Weight:  5 kg | Utility: 119 | PRIORITY
+ID:  4 | Surgical Supplies              | Weight: 12 kg | Utility: 188 | PRIORITY
+ID:  5 | Painkillers Bulk               | Weight:  4 kg | Utility:  88 | PRIORITY
+ID:  6 | Oral Rehydration Salts         | Weight:  3 kg | Utility: 106 | PRIORITY
+ID:  7 | Blood Plasma Packs             | Weight: 10 kg | Utility: 200 | PRIORITY
+ID:  8 | Ready-to-Eat Meals             | Weight: 20 kg | Utility: 150 | PRIORITY
+ID:  9 | Baby Food & Formula            | Weight:  9 kg | Utility: 125 | PRIORITY
+ID: 15 | Water Purification Tablets     | Weight:  2 kg | Utility:  75
+ID: 24 | Satellite Phone                | Weight:  2 kg | Utility:  95
+ID: 25 | Power Bank Set                 | Weight:  3 kg | Utility:  45
+ID: 27 | Hygiene Kits                   | Weight: 10 kg | Utility:  70
+ID: 28 | Sanitary Pads Pack             | Weight:  6 kg | Utility:  65
+
+---------- Approach comparison (first 20 items, W = 100) ----------
+Approach              Utility   Weight(kg)  Time(ms)
+Brute Force           1532      99          3.227
+Dynamic Programming   1532      99          0.005
+Greedy (ratio)        1532      99          0.002
+Greedy optimality gap: 0 utility
+
+---------- Approach comparison (all 30 items, W = 100) ----------
+Dynamic Programming : utility 1639
+Greedy (ratio)      : utility 1632  (gap 7)
+
+---------- Multi-truck allocation (DP, truck by truck) ----------
+Truck A (60 kg): utility 1266, load 60 kg, items: 1 2 3 4 6 7 9 15 24 25
+Truck B (50 kg): utility 471, load 50 kg, items: 5 11 13 16 28
+Truck C (40 kg): utility 290, load 40 kg, items: 8 22 26
+Total utility across trucks: 2027  |  Items left at base: 12
+
+Enter urgent item (weight utility perishable[yes/no]): 12 150 yes
+>> ALERT: urgent item arrived (12 kg, utility 188). Re-running DP...
+
+Truck Capacity      : 100 kg
+Used Capacity       : 100 kg
+Remaining Capacity  : 0 kg
+Total Utility       : 1757
+Selected Items:
+----------------------------------------------
+ID:  1 | Insulin & Cold-chain Medicines | Weight:  8 kg | Utility: 175 | PRIORITY
+ID:  2 | Antibiotics Box                | Weight:  6 kg | Utility: 138 | PRIORITY
+ID:  3 | First Aid Kit                  | Weight:  5 kg | Utility: 119 | PRIORITY
+ID:  4 | Surgical Supplies              | Weight: 12 kg | Utility: 188 | PRIORITY
+ID:  5 | Painkillers Bulk               | Weight:  4 kg | Utility:  88 | PRIORITY
+ID:  6 | Oral Rehydration Salts         | Weight:  3 kg | Utility: 106 | PRIORITY
+ID:  7 | Blood Plasma Packs             | Weight: 10 kg | Utility: 200 | PRIORITY
+ID:  9 | Baby Food & Formula            | Weight:  9 kg | Utility: 125 | PRIORITY
+ID: 13 | Milk Powder                    | Weight: 11 kg | Utility: 100 | PRIORITY
+ID: 15 | Water Purification Tablets     | Weight:  2 kg | Utility:  75
+ID: 22 | Search Light Kit               | Weight:  7 kg | Utility:  50
+ID: 24 | Satellite Phone                | Weight:  2 kg | Utility:  95
+ID: 25 | Power Bank Set                 | Weight:  3 kg | Utility:  45
+ID: 28 | Sanitary Pads Pack             | Weight:  6 kg | Utility:  65
+ID: 31 | URGENT Item                    | Weight: 12 kg | Utility: 188 | PRIORITY
+Utility change      : 118
+Dropped items       : 8 27
+
+---------- Performance analysis: Brute Force vs DP ----------
+n     BruteForce(ms)  DP(ms)      Same utility
+10    0.004           0.003       yes
+14    0.057           0.003       yes
+18    0.822           0.004       yes
+20    3.266           0.005       yes
+22    12.831          0.005       yes
+24    55.787          0.007       yes
+==============================================

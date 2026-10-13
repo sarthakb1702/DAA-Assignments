@@ -1,0 +1,31 @@
+item_id,name,category,weight_kg,utility_value,perishable
+1,Insulin & Cold-chain Medicines,Medicine,8,140,yes
+2,Antibiotics Box,Medicine,6,110,yes
+3,First Aid Kit,Medicine,5,95,yes
+4,Surgical Supplies,Medicine,12,150,yes
+5,Painkillers Bulk,Medicine,4,70,yes
+6,Oral Rehydration Salts,Medicine,3,85,yes
+7,Blood Plasma Packs,Medicine,10,160,yes
+8,Ready-to-Eat Meals,Food,20,120,yes
+9,Baby Food & Formula,Food,9,100,yes
+10,Fresh Fruits Crate,Food,18,60,yes
+11,Protein Biscuits,Food,14,90,yes
+12,Rice Sack,Food,25,110,yes
+13,Milk Powder,Food,11,80,yes
+14,Drinking Water Cans,Water,30,100,no
+15,Water Purification Tablets,Water,2,75,no
+16,Water Filter Unit,Water,15,105,no
+17,Emergency Tent,Shelter,28,125,no
+18,Tarpaulin Roll,Shelter,12,60,no
+19,Blankets Bale,Shelter,16,85,no
+20,Sleeping Mats,Shelter,14,55,no
+21,Portable Generator,Equipment,35,130,no
+22,Search Light Kit,Equipment,7,50,no
+23,Rescue Tools Kit,Equipment,22,140,no
+24,Satellite Phone,Equipment,2,95,no
+25,Power Bank Set,Equipment,3,45,no
+26,Stretchers,Equipment,13,90,no
+27,Hygiene Kits,Hygiene,10,70,no
+28,Sanitary Pads Pack,Hygiene,6,65,no
+29,Mosquito Nets,Hygiene,8,50,no
+30,Warm Clothes Bale,Clothing,18,65,no
