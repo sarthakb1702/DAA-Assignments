@@ -1,0 +1,28 @@
+Total intersections read: 20
+Total roads read        : 35
+Total hospitals read    : 3
+
+Enter ambulance starting location (0-19): 0
+==============================================
+     SMART AMBULANCE ROUTING SYSTEM
+==============================================
+Initial shortest travel time: 15 minutes
+Nearest hospital: City General Hospital (node 7)
+Path: 0 -> 2 -> 5 -> 8 -> 7
+Route details:
+   0 ->  2 | Market Street          |  4 min | Low traffic
+   2 ->  5 | Temple Lane            |  3 min | Low traffic
+   5 ->  8 | Bridge Road            |  5 min | High traffic
+   8 ->  7 | Hospital Link          |  3 min | Low traffic
+
+Enter edge to update (u v newWeight): 7 8 30
+--- Traffic update received: road 7 <-> 8 now takes 30 minutes ---
+
+After update shortest travel time: 17 minutes
+Nearest hospital: City General Hospital (node 7)
+Path: 0 -> 1 -> 4 -> 7
+Route details:
+   0 ->  1 | Station Road           |  6 min | Moderate traffic
+   1 ->  4 | College Avenue         |  5 min | Moderate traffic
+   4 ->  7 | Ring Road West         |  6 min | Moderate traffic
+==============================================

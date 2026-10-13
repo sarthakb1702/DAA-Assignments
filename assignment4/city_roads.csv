@@ -1,0 +1,36 @@
+road_id,source,destination,road_name,travel_time_min,traffic_level
+1,0,1,Station Road,6,Moderate
+2,0,2,Market Street,4,Low
+3,0,3,Old Highway,9,High
+4,1,4,College Avenue,5,Moderate
+5,1,5,Lake View Road,7,Low
+6,2,5,Temple Lane,3,Low
+7,2,6,Mill Road,8,High
+8,3,6,Industrial Link,5,Moderate
+9,3,9,Bypass North,12,Low
+10,4,7,Ring Road West,6,Moderate
+11,4,8,Garden Street,4,Low
+12,5,8,Bridge Road,5,High
+13,5,10,Canal Road,6,Moderate
+14,6,10,Railway Crossing,4,High
+15,6,11,Cattle Market Road,7,Low
+16,7,8,Hospital Link,3,Low
+17,7,12,Medical Lane,5,Moderate
+18,8,13,Central Avenue,6,High
+19,9,11,Highway Service Road,6,Moderate
+20,9,15,Outer Ring Road,10,Low
+21,10,13,University Road,5,Moderate
+22,10,14,Park Street,8,Low
+23,11,14,Flyover Road,4,High
+24,11,15,Truck Terminal Road,5,Low
+25,12,13,Stadium Road,4,Moderate
+26,12,16,Metro Corridor,7,Moderate
+27,13,14,City Centre Road,3,High
+28,13,17,Mall Road,6,High
+29,14,18,Airport Road,5,Moderate
+30,15,18,Expressway Link,6,Low
+31,16,17,Riverside Drive,4,Low
+32,17,18,Tech Park Road,5,Moderate
+33,16,19,Cantonment Road,6,Low
+34,17,19,Civil Lines,7,Moderate
+35,18,19,Hospital Bypass,4,Low
